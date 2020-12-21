@@ -1,0 +1,2930 @@
+<?xml version="1.0"?>
+
+<!--
+©2020 Salvatore F. Pileggi and Sawda Lamia, University of Technology Sydney (Australia)
+
+This work is licensed under the Creative Commons Attribution 4.0 International License. 
+To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+Citation: 
+Pileggi, S. F., & Lamia, S. A. (2020). Climate Change TimeLine: An Ontology to Tell the Story so Far. IEEE Access, 8, 65294-65312.
+-->
+
+
+
+
+
+<rdf:RDF xmlns="http://www.flavio.org/CLIMATEchange#"
+     xml:base="http://www.flavio.org/CLIMATEchange"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CLIMATEchange="http://www.flavio.org/CLIMATEchange#">
+    <owl:Ontology rdf:about="http://www.flavio.org/CLIMATEchange">
+        <owl:versionIRI rdf:resource="http://www.flavio.org/CLIMATEchange"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#adoptedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.flavio.org/CLIMATEchange#adoptedBy">
+        <rdfs:domain rdf:resource="http://www.flavio.org/CLIMATEchange#Policy"/>
+        <rdfs:range rdf:resource="http://www.flavio.org/CLIMATEchange#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#endYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.flavio.org/CLIMATEchange#endYear">
+        <rdfs:domain rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+        <rdfs:range rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#impact -->
+
+    <owl:ObjectProperty rdf:about="http://www.flavio.org/CLIMATEchange#impact">
+        <rdfs:domain rdf:resource="http://www.flavio.org/CLIMATEchange#Technology"/>
+        <rdfs:range rdf:resource="http://www.flavio.org/CLIMATEchange#Impact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#policyScope -->
+
+    <owl:ObjectProperty rdf:about="http://www.flavio.org/CLIMATEchange#policyScope">
+        <rdfs:domain rdf:resource="http://www.flavio.org/CLIMATEchange#Policy"/>
+        <rdfs:range rdf:resource="http://www.flavio.org/CLIMATEchange#PolicyScope"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#reference -->
+
+    <owl:ObjectProperty rdf:about="http://www.flavio.org/CLIMATEchange#reference">
+        <rdfs:domain rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+        <rdfs:range rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#relatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.flavio.org/CLIMATEchange#relatedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+        <rdfs:range rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#startYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.flavio.org/CLIMATEchange#startYear">
+        <rdfs:domain rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+        <rdfs:range rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#year -->
+
+    <owl:ObjectProperty rdf:about="http://www.flavio.org/CLIMATEchange#year">
+        <rdfs:domain rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+        <rdfs:range rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#citation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.flavio.org/CLIMATEchange#citation">
+        <rdfs:domain rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.flavio.org/CLIMATEchange#description">
+        <rdfs:domain rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#endYear_s -->
+
+    <owl:DatatypeProperty rdf:about="http://www.flavio.org/CLIMATEchange#endYear_s"/>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#startYear_s -->
+
+    <owl:DatatypeProperty rdf:about="http://www.flavio.org/CLIMATEchange#startYear_s">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#year_s -->
+
+    <owl:DatatypeProperty rdf:about="http://www.flavio.org/CLIMATEchange#year_s"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ClimateChange_Fact -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Demonstration -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#Demonstration">
+        <rdfs:subClassOf rdf:resource="http://www.flavio.org/CLIMATEchange#PoliticalInitiative"/>
+        <rdfs:subClassOf rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Happening -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#Happening">
+        <rdfs:subClassOf rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Impact -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#Impact"/>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Organization -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#Organization"/>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Policy -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#Policy">
+        <rdfs:subClassOf rdf:resource="http://www.flavio.org/CLIMATEchange#PoliticalInitiative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#PolicyScope -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#PolicyScope"/>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#PoliticalInitiative -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#PoliticalInitiative">
+        <rdfs:subClassOf rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Reference -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#Reference"/>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ScientificEvidence -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#ScientificEvidence">
+        <rdfs:subClassOf rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#SocialAwareness -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#SocialAwareness">
+        <rdfs:subClassOf rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Technology -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#Technology">
+        <rdfs:subClassOf rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Theory -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#Theory">
+        <rdfs:subClassOf rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChange_Fact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Year -->
+
+    <owl:Class rdf:about="http://www.flavio.org/CLIMATEchange#Year"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- ftp://ftp.library.noaa.gov/docs.lib/htdocs/rescue/mwr/093/mwr-093-12-0769.pdf -->
+
+    <owl:NamedIndividual rdf:about="ftp://ftp.library.noaa.gov/docs.lib/htdocs/rescue/mwr/093/mwr-093-12-0769.pdf">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Manabe, S., Smagorinsky, J. &amp; Strickler, R.F. 1965, &apos;SIMULATED CLIMATOLOGY OF A GENERAL CIRCULATION MODEL WITH A HYDROLOGIC CYCLE&apos;, vol. 93, no.12, pp. 769-98.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nsidc.org/arcticseaicenews/2012/09/arctic-sea-ice-extent-near-minimum -->
+
+    <owl:NamedIndividual rdf:about="http://nsidc.org/arcticseaicenews/2012/09/arctic-sea-ice-extent-near-minimum">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/A_1007004813446 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/A_1007004813446">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>O&apos;Connor, R.E., Bard, R.J. &amp; Fisher, A. 1999, &apos;Risk Perceptions, General Environmental Beliefs, and Willingness to Address Climate Change&apos;, Risk Analysis, vol. 19, no. 3, pp. 461-71.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.environmentandsociety.org/tools/keywords/united-nations-environmental-programme-unep-established -->
+
+    <owl:NamedIndividual rdf:about="http://www.environmentandsociety.org/tools/keywords/united-nations-environmental-programme-unep-established">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/10.1002/wea.386 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/10.1002/wea.386">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Hulme, Mike. &quot;On the origin of&apos;the greenhouse effect&apos;: John Tyndall&apos;s 1859 interrogation on nature.&quot; Weather 64.5 (2009): 121-123.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/10.1126/science.1190653 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/10.1126/science.1190653">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Lacis, Andrew A., et al. &quot;Atmospheric CO2: Principal control knob governing Earth’s temperature.&quot; Science 330.6002 (2010): 356-359.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#AlarmistTones -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#AlarmistTones">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1002/wcc.377"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#InfluencePerceptions"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2016"/>
+        <description>Alarmist tones about climate change may not only be futile, but also counter-productive</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#AmazonWildfires -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#AmazonWildfires">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Policy"/>
+        <reference rdf:resource="https://theconversation.com/amazon-fires-explained-what-are-they-why-are-they-sodamaging-and-how-can-we-stop-them-122340"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ParisAgreement"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>The mass uncontrollable wildfires of the Amazons are a major setback to the emission targets set by the Paris Agreement</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#AnthropogenicObservedWarming -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#AnthropogenicObservedWarming">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2010"/>
+        <reference rdf:resource="https://www.carbonbrief.org/analysis-why-scientists-think-100-of-global-warming-is-due-to-humans"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#FirstEvidenceGlobalWarming"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#1950"/>
+        <description>93-123% of observed warming since 1950 is anthropogenic</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1950</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ArcticIce2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ArcticIce2016">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://climate.nasa.gov/news/2465/2016-climate-trends-continue-to-breakrecords"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ArcticIceLossVisualization"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCAR5"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#NSIDCArcticIce2012"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#Greenland&amp;AntarcticIceMelting"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2016"/>
+        <description>Least amount of sea ice observed in the Arctic since satellite records started in 1979</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ArcticIceLossVisualization -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ArcticIceLossVisualization">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="http://www.flavio.org/CLIMATEchange#ArcticIceLossVisualization"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#Greenland&amp;AntarcticIceMelting"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2012"/>
+        <description>Arctic ice reduced to 4 million km2 in just 9 months from historical average of 7 million km2</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#CCNewsCoverage -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#CCNewsCoverage">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2011"/>
+        <reference rdf:resource="https://edition.cnn.com/2013/07/26/world/kyoto-protocol-fast-facts/index.html"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#PoorPublicAwareness"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#2004"/>
+        <description>Climate change news coverage was higher in developed economies rather than developing economies</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#CCReality -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#CCReality">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <reference rdf:resource="https://www.washingtonpost.com/news/worldviews/wp/2015/07/31/map-what-the-world-does-and-doesnt-know-about-climate-change"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#PoorPublicKnowledge"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2015"/>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</year_s>
+        <year_s>A significant portion of the global population are unaware of anthropogenic climate change, and another portion don’t believe in its reality</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#CCRisksTrue -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#CCRisksTrue">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://theconversation.com/climate-change-sea-level-rise-could-displace-millions-ofpeople-within-two-generations-116753"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChangeDomino"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCSR15Prediction"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>The icecaps are melting, causing a rise in sea levels, threatening civilizations close to the shore, a majority of who already fall in the impoverished group, and causing massive displacements of people</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#CO2ClimateChange -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#CO2ClimateChange">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1080/14786449608620846"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GreenhouseGasEmissions"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1896"/>
+        <description>Svante Arrhenius theorized that a small change in carbon dioxide levels could change the climate</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1896</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#CO2ControlKnob -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#CO2ControlKnob">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1080/14786449608620846"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#CO2ClimateChange"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GreenhouseGasEmissions"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1896"/>
+        <description>Arrhenius established that CO2 is the principle control knob for climate change</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1896</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#CO2Doubling -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#CO2Doubling">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="https://bit.ly/36vdHh1"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#CO2ControlKnob"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GreenhouseGasEmissions"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1967"/>
+        <description>Doubling CO2 levels results in a  2°C increase in overall temperatures</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1967</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#CelebrityEndorsements -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#CelebrityEndorsements">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2006"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1016/j.geoforum.2008.04.006"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#PublicKnowledgeTraction"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#1987"/>
+        <description>Celebrities may have helped garner a larger audience, but their fans may endorse the climate change cause for the wrong reasons</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1987</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ChaoticClimate -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ChaoticClimate">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#CO2ControlKnob"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GreenhouseGasEmissions"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1897"/>
+        <description>Thomas C Chamberlin established the many factors that influence the carbon cycle</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1897</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ChernobylNuclearDisaster -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ChernobylNuclearDisaster">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <reference rdf:resource="https://www.theguardian.com/world/1986/apr/30/russia.nuclear"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1986"/>
+        <description>Nuclear Reactor disaster at Chernobyl has negative impact on public support of nuclear energy</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1986</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ChinaWorstPolluter -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ChinaWorstPolluter">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2009"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1038/sdata.2017.201"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#KyotoProtocolEstablished"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#2000"/>
+        <description>China became the worst carbon emitter in the 2000s</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ClimateChangeDomino -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ClimateChangeDomino">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Policy"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="https://www.bbc.com/news/science-environment-49753680"/>
+        <reference rdf:resource="https://www.theguardian.com/environment/2011/may/29/carbon-emissions-nuclearpower"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCAR4Reserved"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2011"/>
+        <description>IEA issued warning to stay within 2°C of permissible change or face the uncontrollable domino effect</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ClimateChangeVotes -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ClimateChangeVotes">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <reference rdf:resource="http://purl.obolibrary.org/obo/A_1007004813446"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#PoorPublicKnowledge"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1999"/>
+        <description>A majority of the public were influenced by personal convenience considerations when voting on climate change policies</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ClimateCommisionReport -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ClimateCommisionReport">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <reference rdf:resource="https://www.climatecouncil.org.au/resources/the-critical-decade-climate-change-science-risks-and-responses-2011"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2011"/>
+        <description>Climate Commission of Australia published its first report outlining the dangers of continued anthropogenic greenhouse emissions</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ClimateUnpredictable -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ClimateUnpredictable">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#CO2ClimateChange"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#CO2ControlKnob"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ChaoticClimate"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1961"/>
+        <citation>Sutcliffe, R.C. 1961, &apos;Changes of Climate&apos;, Nature, vol. 192, no. 4808, pp. 1139-40.</citation>
+        <description>Skepticism regarding trying to predict an unpredictable natural phenomenon</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1961</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ClimategateScandal -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ClimategateScandal">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1177/0002764212458272"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#USClimateDebate"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2012"/>
+        <description>While there has been rising skepticism in the US on the reality of climate change following the climategate scandal, scientists were still believed to be the best source for factual information.</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#CycloneIdai -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#CycloneIdai">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="https://www.bbc.com/news/science-environment-47638588"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChangeDomino"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCSR15Prediction"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>Freak storms are becoming the norm, disrupting livelihoods and resulting in deaths by the hundreds</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#DansgaardIceEvidence -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#DansgaardIceEvidence">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="http://www.flavio.org/CLIMATEchange#InterglacialPeriods"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1126/science.218.4579.1273"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1982"/>
+        <description>2kms of ice recovered evidenced huge fluctuations in temperatures and carbon levels</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1982</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#DataCentreEmissions -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#DataCentreEmissions">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Technology"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1016/j.jclepro.2017.12.239"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ICTPrediction2020"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2018"/>
+        <description>It is projected that by 2020, 45% of ICT greenhouse footprint will be due to the energy used in data centers</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#DeathCountEuropeanHeatWave -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#DeathCountEuropeanHeatWave">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://www.climatesignals.org/events/european-heat-wave-2003"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#EuropeanHeatWave"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2003"/>
+        <description>70,000 lives lost in the European heat wave</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Deforestation -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#Deforestation">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://www.bbc.com/news/science-environment-49484530"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>Deforestation ranked as the No.3 biggest carbon emitter by the Global Forest Watch after China and US</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#DevelopingEconomiesDroughts -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#DevelopingEconomiesDroughts">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2009"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1007/s00267-008-9259-3"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCFirstIssue"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#2000"/>
+        <description>Prolonged droughts affect developing economies</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#DurbanClimateChangeAgreement -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#DurbanClimateChangeAgreement">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Policy"/>
+        <reference rdf:resource="https://www.telegraph.co.uk/news/earth/environment/climatechange/8949099/Durban-climate-change-the-agreement-explained.html"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#KyotoProtocolEstablished"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2011"/>
+        <description>The Durban Climate Change Conference 2011 hosted by UNFCC got 190 countries, including China, the US and India, to come to an agreement for a target to keep global temperature under the 2°C mark</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#EarthDay -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#EarthDay">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <reference rdf:resource="https://www.earthday.org/about/the-history-of-earth-day"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1970"/>
+        <description>The first Earth Day celebrated</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#EmilianiSediments -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#EmilianiSediments">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1126/science.189.4208.1083"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#MercerPrediction"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1975"/>
+        <description>Cesare Emiliani obtained deep-sea sediments that evidenced rapid rises in sea level by the meters</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#EmissionsCessationEffect -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#EmissionsCessationEffect">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2014"/>
+        <description>Even if emissions were to cease completely, rise in temperatures and sea levels would be consistent at least until 2100</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#EuropeClimateDebate -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#EuropeClimateDebate">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2006"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1002/wcc.119"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#PoorPublicKnowledge"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#2000"/>
+        <description>European news coverage of climate change was mainly about freak weathers and wildlife extinction</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#EuropeanHeatWave -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#EuropeanHeatWave">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1038/nature03089"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCFirstIssue"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2003"/>
+        <description>Rise in temperature caused heat waves that affected the rich nations of Europe</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#FirstEvidenceGlobalWarming -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#FirstEvidenceGlobalWarming">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#1935"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1016/j.endeavour.2016.07.002"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GlobalTemperatureRecords"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#1880"/>
+        <description>Guy Stewart Callendar demonstrated that global temperatures had risen by 0.3°C</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1935</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1880</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ForestFires2019 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ForestFires2019">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://theconversation.com/huge-wildfires-inthe-arctic-and-far-north-send-a-planetary-warning-121167"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChangeDomino"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCSR15Prediction"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#RecordTemperatures2019"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>An estimated carbon emission of 100 million tons due to intense forest fires in the Arctic regions of Alaska, Canada and Siberia alone</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GlobalTemperatureRecords -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GlobalTemperatureRecords">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://earthobservatory.nasa.gov/world-of-change/DecadalTemp"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#Weather&amp;TemperatureDataCollection"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1880"/>
+        <description>Global temperature records began being collected by World Meteorological Organization (WMO)</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1880</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GovernmentSued -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GovernmentSued">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <reference rdf:resource="https://www.newscientist.com/article/dn27774-dutch-government-loses-worlds-firstclimate-liability-lawsuit"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#PublicKnowledgeTraction"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2015"/>
+        <description>Dutch environmental group sued the government with the support of 886 citizens over their failure to cut greenhouse emissions, and won</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GreenhouseEffect -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GreenhouseEffect">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="http://www.flavio.org/10.1126/science.1190653"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1824"/>
+        <description>Joseph Fourier theorized and demonstrated the greenhouse effect.</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1824</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GreenhouseEffectConfirmed -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GreenhouseEffectConfirmed">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="http://www.flavio.org/10.1002/wea.386"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GreenhouseEffect"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1859"/>
+        <description>John Tyndall&apos;s experiments confirmed that atmospheric gases can trap heat.</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1859</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GreenhouseGasEmissions -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GreenhouseGasEmissions">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="http://www.flavio.org/10.1002/wea.386"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1086/607921"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GreenhouseEffectConfirmed"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1859"/>
+        <description>Greenhouse gases linked to the industrial use of fossil fuels.</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1859</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GreenlandIceMelting -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GreenlandIceMelting">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2006"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1126/science.1121381"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#2001"/>
+        <description>Greenland ice melting at alarming rates</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GreenlandIceRecord -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GreenlandIceRecord">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://eos.org/articles/greenland-ice-sheet-beats-all-time-1-day-melt-record"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ArcticIce2016"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ArcticIceLossVisualization"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCAR5"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#NSIDCArcticIce2012"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>Greenland’s ice sheet melted a record 12.5 bn tons of ice in just one day on 1 August 2019</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GretaPoliticalAttack -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GretaPoliticalAttack">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <reference rdf:resource="https://www.aljazeera.com/indepth/opinion/afraid-greta-thunberg-190901191445655.html"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GretaThunbergGlobal"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>Greta Thunberg politically attacked to dissuade public support</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GretaThunbergDebut -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GretaThunbergDebut">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Demonstration"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://blog.ted.com/greta-thunberg-nominated-for-nobel-peace-prize-and-other-ted-news"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2018"/>
+        <description>Greta Thunberg&apos;s solitary school strike outside the Swedish Parliament in August 2018</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GretaThunbergGlobal -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GretaThunbergGlobal">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Demonstration"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://350.org/press-release/1-4-million-students-across-the-globe-demand-climate-action"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GretaThunbergDebut"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>On 15 March 2019, Greta Thunberg joined globally by about 1.6 million students to school strike to protest government inaction</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GretaThunbergLifestyle -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GretaThunbergLifestyle">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <reference rdf:resource="https://www.townandcountrymag.com/society/tradition/a28785126/pierre-casiraghi-grace-kelly-grandson-greta-thunberg-sailing"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GretaThunbergDebut"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GretaThunbergGlobal"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GretaThunbergRecognition"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>Greta Thunberg traveled in a carbon neutral boat for 15 days to attend the UN Climate Action Summit in New York</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#GretaThunbergRecognition -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#GretaThunbergRecognition">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GretaThunbergGlobal"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>GretaThunberg awarded the German Golden Camera as an iconic youth leader, and nominated for the Prix Liberte of France and the prestigious Nobel Peace Prize</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ICTCarbonSlowed -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ICTCarbonSlowed">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Technology"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2015"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.3390/su10093027"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ICTPrediction2020"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#2000"/>
+        <description>The carbon footprint for the ICT industry has slowed down over the period 2000-2015 due to resource decoupling, a trend projected to continue in 2020</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ICTEmissions -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ICTEmissions">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Technology"/>
+        <reference rdf:resource="https://pdfs.semanticscholar.org/001d/53a455047ea13a2979f9ea59a4d29a09546c.pdf"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ICTPrediction2020"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2008"/>
+        <description>ICT related emissions are comparable to emissions caused by the air travel industry</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ICTEnergyConsumption -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ICTEnergyConsumption">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Technology"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2015"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.3390/su10093027"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ICTCarbonSlowed"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#2000"/>
+        <description>Energy consumption has increased only slightly, attributable to ICT users growing over ten times, while energy consumption/user has decreased by about 67%</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ICTPrediction2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ICTPrediction2020">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Technology"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1016/j.jclepro.2017.12.239"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2018"/>
+        <description>It was projected that by 2020 the greenhouse footprint of the global ICT industry would be at 3.06% - 3.6% of the aggregate global greenhouse emissions recorded in 2007</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ICTPrediction2040 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ICTPrediction2040">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Technology"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1016/j.jclepro.2017.12.239"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ICTPrediction2020"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2018"/>
+        <description>It is forecasted that by 2040, if the ICT industry goes unchecked it could
+account for as much as 14% of the total global greenhouse emissions recorded in 2016 by an exponential fit</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#IPCCAR3Prediction -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#IPCCAR3Prediction">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="https://www.ipcc.ch/site/assets/uploads/2018/03/wg2TARtechsum.pdf"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#CO2ClimateChange"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2001"/>
+        <citation>Manning, M., and C. Nobre. &quot;Technical Summary.&quot; Europe 5 (2001): 3.</citation>
+        <description>A prediction of 1.4°C to 5.8°C increase in temperatures by the end of the 21st century due to the unprecedented spike in carbon emissions</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#IPCCAR4Reserved -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#IPCCAR4Reserved">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://history.aip.org/climate/internat.htm#L_M084"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2007"/>
+        <description>IPCC AR4 reserved due to political influences, with predictions of freak storms and record temperatures</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#IPCCAR5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#IPCCAR5">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="https://www.ipcc.ch/site/assets/uploads/2018/05/SYR_AR5_FINAL_full_wcover.pdf"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCAR4Reserved"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2014"/>
+        <description>IPCC AR5 confirmed increased levels of greenhouse gases in the atmosphere, melting ice, rising sea levels, loss of lives, human and animal habitats, crops and livelihoods, and severe record breaking weather and temperature patterns</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#IPCCAR5Hope -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#IPCCAR5Hope">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="https://www.ipcc.ch/site/assets/uploads/2018/05/SYR_AR5_FINAL_full_wcover.pdf"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#EmissionsCessationEffect"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2014"/>
+        <description>Still possible to keep below 2°C of pre-industrial temperatures if policies are adapted to reduce and finally cease greenhouse emissions by the end of the 21st century</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#IPCCEstablished -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#IPCCEstablished">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#PoliticalInitiative"/>
+        <reference rdf:resource="https://www.ucsusa.org/resources/ipcc-who-are-they"/>
+        <relatedTo rdf:resource="http://www.flavio.org/doi.org/10.1029/GlobalTemperatureRising"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1988"/>
+        <description>Intergovernmental Panel on Climate Change (IPCC) was established</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1988</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#IPCCFirstIssue -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#IPCCFirstIssue">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://en.wikipedia.org/wiki/IPCC_First_Assessment_Report"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCEstablished"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1990"/>
+        <description>First issue of IPCC was published</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1990</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#IPCCSR15Policy -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#IPCCSR15Policy">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Policy"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="https://www.ipcc.ch/site/assets/uploads/sites/2/2019/05/SR15_SPM_version_report_LR.pdf"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChangeDomino"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2018"/>
+        <description>If radical changes are made by 2020 using technology, infrastructure and policies as recommended by the IPCC, net zero carbon emissions could be reached by 2055 or 2040</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#IPCCSR15Prediction -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#IPCCSR15Prediction">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="https://www.ipcc.ch/site/assets/uploads/sites/2/2019/05/SR15_SPM_version_report_LR.pdf"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChangeDomino"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2018"/>
+        <description>IPCC SR15 projected global warming to be at 1.5°C by 2040 at current rates of emission</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#IceAgeWarming -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#IceAgeWarming">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#1999"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1126/science.289.5486.1897"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#DansgaardIceEvidence"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#InterglacialPeriods"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#1990"/>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1990</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#InfluencePerceptions -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#InfluencePerceptions">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1002/wcc.377"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#PublicKnowledgeTraction"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2016"/>
+        <description>A number of factors, including global vs. local warming, global warming vs. climate change, and numeric vs. non-numeric communication, were found to mold perceptions on climate change</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#InterglacialPeriods -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#InterglacialPeriods">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1126/science.218.4579.1273"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#EmilianiSediments"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1982"/>
+        <description>Interglacial periods last 10,000 years</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1982</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#JamesCrollIceAge -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#JamesCrollIceAge">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="https://www.famousscientists.org/james-croll"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1864"/>
+        <description>James Croll theorized that new snow coverage of regions could lead to an ice age</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1864</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#JamesHansenTestimonial -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#JamesHansenTestimonial">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1002/wcc.119"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1988"/>
+        <description>Jame Hansen&apos;s testimonial changed the newspaper tone about climate change from one of scientific significance to one of controversy</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1988</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#JohnstonNitrateEmissions -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#JohnstonNitrateEmissions">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1126/science.173.3996.517"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GreenhouseGasEmissions"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1971"/>
+        <description>Nitrate molecules emitted from planes negatively impact the ozone layer</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#KyotoProtocolEstablished -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#KyotoProtocolEstablished">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#PoliticalInitiative"/>
+        <reference rdf:resource="https://unfccc.int/kyoto_protocol"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1997"/>
+        <description>The Kyoto Protocol was established in an attempt to bind developed economies to an emissions reduction plan</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1997</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#MathematicalModelsCriticized -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#MathematicalModelsCriticized">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1038/328123a0"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1987"/>
+        <description>Mathematical models were criticized for only allowing smooth temperature transitions</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#MercerPrediction -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#MercerPrediction">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="https://iahs.info/uploads/dms/079020.pdf"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1968"/>
+        <description>A rise in temperature may melt the WAIS, raising sea levels by 5 metres</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#MethaneEmissions -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#MethaneEmissions">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.3402/tellusa.v26i1-2.9737"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GreenhouseGasEmissions"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1974"/>
+        <description>Methane emissions are a much bigger contributor to greenhouse emissions than minerals</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#MethaneLevelsRising -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#MethaneLevelsRising">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1126/science.239.4844.1129"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#MethaneEmissions"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1988"/>
+        <description>Methane levels had been rising by 1% each year</description>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1988</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#MilankovitchCycles -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#MilankovitchCycles">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1029/92PA02253"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#JamesCrollIceAge"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1992"/>
+        <description>Shifts in the Earth&apos;s axis would set off periods of warming and cooling and trigger ice ages</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1992</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ModernGlobalWarming -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ModernGlobalWarming">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1038/nature19082"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#AnthropogenicObservedWarming"/>
+        <relatedTo rdf:resource="http://www.flavio.org/doi.org/10.1029/GlobalTemperatureRising"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2016"/>
+        <description>Modern global warming coincides with the start of the First Industrial Revolution, indicating that modern global warming is human induced.</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#NSIDCArcticIce2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#NSIDCArcticIce2012">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="http://nsidc.org/arcticseaicenews/2012/09/arctic-sea-ice-extent-near-minimum"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ArcticIceLossVisualization"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#Greenland&amp;AntarcticIceMelting"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2012"/>
+        <description>Arctic ice record minimum at 3.41 million km2</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#National -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#National">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#PolicyScope"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Negative -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#Negative">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Impact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Neutral -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#Neutral">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Impact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#OceanCurrents -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#OceanCurrents">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="https://iahs.info/uploads/dms/079020.pdf"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#WaterVapourGreenhouse"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1969"/>
+        <description>A model that accounts for ocean currents and their influence on atmospheric circulations</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Okjokull_dead -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#Okjokull_dead">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://en.wikipedia.org/wiki/Okjökull"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#MercerPrediction"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2014"/>
+        <description>The glacier was declared dead in 2014.</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Okjokull_funeral -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#Okjokull_funeral">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Demonstration"/>
+        <reference rdf:resource="https://www.sbs.com.au/news/iceland-holds-funeral-for-first-glacier-lost-to-climate-change"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#Okjokull_dead"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>Public funeral for the Okjokull glacier, which was declared extinct a decade ago.</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#ParisAgreement -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#ParisAgreement">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#PoliticalInitiative"/>
+        <reference rdf:resource="https://unfccc.int/process-and-meetings/the-paris-agreement/what-is-the-paris-agreement"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#DurbanClimateChangeAgreement"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#KyotoProtocolEstablished"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2015"/>
+        <description>The Paris Agreement brought all 197 countries (Parties) of the UNFCCC under a binding agreement to actively fight climate change.</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#PineIslandBayIceMelting -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#PineIslandBayIceMelting">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2006"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1007/s10584-008-9448-3"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#MercerPrediction"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#2001"/>
+        <description>Pine Island Bay ice melted by 5kms in 5 years</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#PoorPublicAwareness -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#PoorPublicAwareness">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#1984"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1002/wcc.321"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#1980"/>
+        <description>In the early 1980s, only about 30% of respondents were aware of climate change</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1984</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1980</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#PoorPublicKnowledge -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#PoorPublicKnowledge">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1002/wcc.321"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#JamesHansenTestimonial"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#PublicKnowledgeTraction"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1990"/>
+        <description>90% awareness of climate change, however, poor understanding of its reasons</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1990</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Positive -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#Positive">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Impact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#PublicKnowledgeTraction -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#PublicKnowledgeTraction">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#1989"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1002/wcc.321"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ChernobylNuclearDisaster"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#PoorPublicAwareness"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#1986"/>
+        <description>Public knowledge gained traction around the late 1980s where up to 70% of respondents were aware of climate change</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1986</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#QueenslandInfrastructurePolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#QueenslandInfrastructurePolicy">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Policy"/>
+        <reference rdf:resource="https://www.theguardian.com/australia-news/2019/sep/09/like-nothing-weve-seen-queensland-bushfires-tear-through-rainforest"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChangeDomino"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCSR15Prediction"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>Unprecedented fires raging in Queensland, Australia, has led to discourse of building infrastructure with future climate change risks in mind</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#RecordHeat2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#RecordHeat2016">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://climate.nasa.gov/news/2465/2016-climate-trends-continue-to-breakrecords"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCAR5"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2016"/>
+        <description>January-June 2016 were each month successively hotter than any on record since 1880</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#RecordHeat2019 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#RecordHeat2019">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://www.sbs.com.au/news/july-was-the-hottest-month-ever-recorded-on-earth"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChangeDomino"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCSR15Prediction"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#RecordTemperatures2019"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>July 2019 has been the hottest month ever since records began</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#RecordTemperatures2019 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#RecordTemperatures2019">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChangeDomino"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCSR15Prediction"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>400 record temperatures set during May-August 2019</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#RenewableEnergy -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#RenewableEnergy">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Policy"/>
+        <reference rdf:resource="https://www.theguardian.com/environment/climate-consensus-97-per-cent/2017/jan/02/climate-change-in-2016-the-good-the-bad-and-the-ugly"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ParisAgreement"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2016"/>
+        <description>Parties to the UNFCCC started moving towards renewable energy sources by making it more cost-effective in comparison to fossil fuel</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#SpeciesExtinction -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#SpeciesExtinction">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="https://www.cbsnews.com/news/report-1-million-animals-plant-species-face-extinction-due-climate-change-human-activity-population"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCSR15Prediction"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2019"/>
+        <description>The rise in temperature is a threat to all lives, with one million species at risk</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#TasmaniaGHEmissions -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#TasmaniaGHEmissions">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="https://theconversation.com/state-of-theclimate-2018-bureau-of-meteorology-and-csiro-109001"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChangeDomino"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2018"/>
+        <description>Total greenhouse gases in Tasmania were at a staggering 500ppm carbon dioxide equal on record in the last 0.8-2 million years</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Trans-national -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#Trans-national">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#PolicyScope"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#TrumpAdministration -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#TrumpAdministration">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#PoliticalInitiative"/>
+        <reference rdf:resource="https://www.climatechangenews.com/2017/03/16/trump-budget-us-stop-funding-un-climate-process"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#DurbanClimateChangeAgreement"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#KyotoProtocolEstablished"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ParisAgreement"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2017"/>
+        <description>President Trump&apos;s administration took a step back from USA&apos;s prior agreements, a serious blow to climate change efforts globally</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#TyphoonHaiyan -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#TyphoonHaiyan">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://www.arcgis.com/apps/Cascade/index.html?appid=bba35e41b8da423498ae3bf461e161c8"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCAR4Reserved"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2013"/>
+        <description>Typhoon Haiyan induced by warmer ocean temperatures, one of the strongest on record</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#TysonNitrateEmissions -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#TysonNitrateEmissions">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1029/GL005i006p00535"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#JohnstonNitrateEmissions"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1978"/>
+        <description>Nitrate molecules emitted from planes negatively impact the ozone layer</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1978</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#UNEPEstablished -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#UNEPEstablished">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#PoliticalInitiative"/>
+        <reference rdf:resource="http://www.environmentandsociety.org/tools/keywords/united-nations-environmental-programme-unep-established"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1972"/>
+        <description>The United Nations Environment Programme (UNEP) was established</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#USAResistsPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#USAResistsPolicy">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#PoliticalInitiative"/>
+        <reference rdf:resource="https://edition.cnn.com/2013/07/26/world/kyoto-protocol-fast-facts/index.html"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ClimateChangeDomino"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ParisAgreement"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#TrumpAdministration"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2018"/>
+        <description>USA did not believe that it would be affected by climate change being a rich nation</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#USClimateDebate -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#USClimateDebate">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#SocialAwareness"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2001"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1002/wcc.119"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#JamesHansenTestimonial"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#1998"/>
+        <description>US news coverage of climate change was more of a debate about its reality</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#USEnergyCompanies -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#USEnergyCompanies">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Demonstration"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://www.washingtonpost.com/news/energy-environment/wp/2017/04/19/top-trump-advisors-at-odds-over-paris-climate-deal"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ParisAgreement"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#TrumpAdministration"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2017"/>
+        <description>US energy companies, such as ExxonMobil, Cloud Peak Energy and Cheniere Energy urged the Trump Administration to stick to the Paris Agreement</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#WaterVapourGreenhouse -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#WaterVapourGreenhouse">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Theory"/>
+        <reference rdf:resource="ftp://ftp.library.noaa.gov/docs.lib/htdocs/rescue/mwr/093/mwr-093-12-0769.pdf"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GreenhouseGasEmissions"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1965"/>
+        <description>Water vapour in the air locks in more heat in a combined effect</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1965</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Worldwide -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#Worldwide">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#PolicyScope"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1824 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1824">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1859 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1859">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1864 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1864">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1879 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1879">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1880 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1880">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1896 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1896">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1897 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1897">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#19thCenturyGlobalWarming -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#19thCenturyGlobalWarming">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="https://www.theguardian.com/environment/2016/aug/24/human-induced-climate-change-began-earlier-than-previously-thought"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ModernGlobalWarming"/>
+        <relatedTo rdf:resource="http://www.flavio.org/doi.org/10.1029/GlobalTemperatureRising"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2016"/>
+        <description>Modern global warming started in the early 19th century as evidenced by ice bergs, ancient trees and coral reefs.</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1935 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1935">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1950 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1950">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1961 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1961">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1965 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1965">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1967 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1967">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1968 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1968">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1969 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1969">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1970 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1970">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1971 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1971">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1972 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1972">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1974 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1974">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1975 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1975">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1978 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1978">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1980 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1980"/>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1982 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1982">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1984 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1984">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1986 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1986">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1987 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1987">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1988 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1988">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1989 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1989">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1990 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1990">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1992 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1992">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1997 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1997">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1998 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1998">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#1999 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#1999">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2000">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2001">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2003">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2004">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2006">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2007 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2007">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2008">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2009 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2009">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2010">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2011">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2012">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2013">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2013AustraliaRecordTemp -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2013AustraliaRecordTemp">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://www.ncdc.noaa.gov/sotc/hazards/201301#temps"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCAR4Reserved"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2013"/>
+        <description>Australia experienced its hottest month on record in January 2013 with an 8 day average temperature of 39°C</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2013NewZealandDrought -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2013NewZealandDrought">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://www.ncdc.noaa.gov/sotc/hazards/201303#drought"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCAR4Reserved"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2013"/>
+        <description>New Zealand experienced its worst drought since the 1980s</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2013USATornado -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2013USATornado">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://www.wri.org/blog/2014/01/timeline-2013-year-extreme-weather-events"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCAR4Reserved"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2013"/>
+        <description>US experienced its widest tornado on record in May 2013 at a width of 2.6 miles</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2013FreakStorms&amp;Temps -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2013FreakStorms&amp;Temps">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://www.wri.org/blog/2014/01/timeline-2013-year-extreme-weather-events"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCAR4Reserved"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2013"/>
+        <description>A series of freak storms, record breaking temperatures, rainfall, and dryness experienced across continents</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2014">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2015">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2016">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2017">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2018">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#2019 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#2019">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#30GTCarbonEmissions -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#30GTCarbonEmissions">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://www.theguardian.com/environment/2011/may/29/carbon-emissions-nuclearpower"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#ICTPrediction2020"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2010"/>
+        <description>Despite the 2009 economic recession, carbon emissions had risen by 1.6GT from 29GT, and now emissions were in the 30s</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Emissions&amp;Storms2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#Emissions&amp;Storms2012">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://www.theguardian.com/theguardian/2012/dec/18/weekly-review-2012-weather-environment"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#IPCCAR4Reserved"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#2012"/>
+        <description>Record carbon emissions and unusual storms, including a hurricane in the Caribbean and a typhoon in the Philippines</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Greenland&amp;AntarcticIceMelting -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#Greenland&amp;AntarcticIceMelting">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <endYear rdf:resource="http://www.flavio.org/CLIMATEchange#2009"/>
+        <reference rdf:resource="http://www.flavio.org/doi.org/10.1038/nature08471"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#MercerPrediction"/>
+        <startYear rdf:resource="http://www.flavio.org/CLIMATEchange#2001"/>
+        <description>Data captured via satellite showed that ice in Greenland and the Antarctic were melting at alarming rates</description>
+        <endYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</endYear_s>
+        <startYear_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</startYear_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/CLIMATEchange#Weather&amp;TemperatureDataCollection -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/CLIMATEchange#Weather&amp;TemperatureDataCollection">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Happening"/>
+        <reference rdf:resource="https://public.wmo.int/en/about-us/who-we-are/history-IMO"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1879"/>
+        <description>Collection and standardization of weather and temperature data by International Meteorological Organization (IMO) began</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1879</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1002/wcc.119 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1002/wcc.119">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Anderson, A. 2011, &apos;Sources, media, and modes of climate change communication: the role of celebrities&apos;, Wiley Interdisciplinary Reviews: Climate Change, vol. 2, no. 4, pp. 535-46.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1002/wcc.321 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1002/wcc.321">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Capstick, S., Whitmarsh, L., Poortinga, W., Pidgeon, N. &amp; Upham, P. 2015, &apos;International trends in public perceptions of climate change over the past quarter century&apos;, Wiley Interdisciplinary Reviews: Climate Change, vol. 6, no. 1, pp. 35-61.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1002/wcc.377 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1002/wcc.377">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Weber, Elke U. &quot;What shapes perceptions of climate change? New research since 2010.&quot; Wiley Interdisciplinary Reviews: Climate Change 7.1 (2016): 125-134.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1007/s00267-008-9259-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1007/s00267-008-9259-3">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Mertz, O., Halsnæs, K., Olesen, J.E. &amp; Rasmussen, K. 2009, &apos;Adaptation to Climate Change in Developing Countries&apos;, Environmental Management, vol. 43, no. 5, pp. 743-52.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1007/s10584-008-9448-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1007/s10584-008-9448-3">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Vaughan, D.G. 2008, &apos;West Antarctic Ice Sheet Collapse-The Fall and Rise of a Paradigm&apos;, Climatic Change, vol. 91, no. 1, p. 65.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1016/j.endeavour.2016.07.002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1016/j.endeavour.2016.07.002">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Anderson, Thomas R., Ed Hawkins, and Philip D. Jones. &quot;CO2, the greenhouse effect and global warming: from the pioneering work of Arrhenius and Callendar to today&apos;s Earth System Models.&quot; Endeavour 40.3 (2016): 178-187.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1016/j.geoforum.2008.04.006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1016/j.geoforum.2008.04.006">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Boykoff, M.T. &amp; Goodman, M.K. 2009, &apos;Conspicuous redemption? Reflections on the promises and perils of the ‘Celebritization’ of climate change&apos;, Geoforum, vol. 40, no. 3, pp. 395-406.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1016/j.jclepro.2017.12.239 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1016/j.jclepro.2017.12.239">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Belkhir, L. &amp; Elmeligi, A. 2018, &apos;Assessing ICT global emissions footprint: Trends to 2040 &amp; recommendations&apos;, Journal of Cleaner Production, vol. 177, pp. 448-63.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1029/GL005i006p00535 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1029/GL005i006p00535">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Tyson, B.J., Arvesen, J.C. &amp; O&apos;Hara, D. 1978, &apos;Interhemispheric gradients of CF2Cl2, CFCl3, CCl4, and N2O&apos;, vol. 5, no. 6, pp. 535-8.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1029/GlobalTemperatureRising -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1029/GlobalTemperatureRising">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#ScientificEvidence"/>
+        <reference rdf:resource="https://history.aip.org/climate/index.htm"/>
+        <relatedTo rdf:resource="http://www.flavio.org/CLIMATEchange#GlobalTemperatureRecords"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1980"/>
+        <description>Scientists began to notice that global temperatures had been rising over the past century</description>
+        <year_s rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1980</year_s>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1029/92PA02253 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1029/92PA02253">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Imbrie, J., Boyle, E.A., Clemens, S.C., Duffy, A., Howard, W.R., Kukla, G., Kutzbach, J., Martinson, D.G., McIntyre, A., Mix, A.C., Molfino, B., Morley, J.J., Peterson, L.C., Pisias, N.G., Prell, W.L., Raymo, M.E., Shackleton, N.J. &amp; Toggweiler, J.R. 1992, &apos;On the Structure and Origin of Major Glaciation Cycles 1. Linear Responses to Milankovitch Forcing&apos;, Paleoceanography, vol. 7, no. 6, pp. 701-38.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1038/nature03089 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1038/nature03089">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Stott, P.A., Stone, D.A. &amp; Allen, M.R. 2004, &apos;Human contribution to the European heatwave of 2003&apos;, Nature, vol. 432, no. 7017, pp. 610-4</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1038/nature08471 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1038/nature08471">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Pritchard, H.D., Arthern, R.J., Vaughan, D.G. &amp; Edwards, L.A. 2009, &apos;Extensive dynamic thinning on the margins of the Greenland and Antarctic ice sheets&apos;, Nature, vol. 461, p. 971.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1038/nature19082 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1038/nature19082">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Abram, N.J., McGregor, H.V., Tierney, J.E., Evans, M.N., McKay, N.P., Kaufman, D.S., the, P.k.C., Thirumalai, K., Martrat, B., Goosse, H., Phipps, S.J., Steig, E.J., Kilbourne, K.H., Saenger, C.P., Zinke, J., Leduc, G., Addison, J.A., Mortyn, P.G., Seidenkrantz, M.-S., Sicre, M.-A., Selvaraj, K., Filipsson, H.L., Neukom, R., Gergis, J., Curran, M.A.J. &amp; Gunten, L.v. 2016, &apos;Early onset of industrial-era warming across the oceans and continents&apos;, Nature, vol. 536, p. 411.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1038/sdata.2017.201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1038/sdata.2017.201">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Shan, Y., Guan, D., Zheng, H., Ou, J., Li, Y., Meng, J., Mi, Z., Liu, Z. &amp; Zhang, Q. 2018, &apos;China CO2 emission accounts 1997–2015&apos;, Scientific Data, vol. 5, p. 170201.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1038/328123a0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1038/328123a0">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Broecker, W.S. 1987, &apos;Unpleasant surprises in the greenhouse?&apos;, Nature, vol. 328, no. 6126, pp. 123-6.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1080/14786449608620846 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1080/14786449608620846">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Arrhenius, Svante. &quot;XXXI. On the influence of carbonic acid in the air upon the temperature of the ground.&quot; The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science 41.251 (1896): 237-276.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1086/607921 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1086/607921">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Chamberlin, Thomas C. &quot;A group of hypotheses bearing on climatic changes.&quot; The Journal of Geology 5.7 (1897): 653-683.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1126/science.1121381 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1126/science.1121381">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Rignot, E. &amp; Kanagaratnam, P. 2006, &apos;Changes in the Velocity Structure of the Greenland Ice Sheet&apos;, Science, vol. 311, no. 5763, p. 986.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1126/science.173.3996.517 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1126/science.173.3996.517">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Johnston, Harold. &quot;Reduction of stratospheric ozone by nitrogen oxide catalysts from supersonic transport exhaust.&quot; Science 173.3996 (1971): 517-522.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1126/science.189.4208.1083 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1126/science.189.4208.1083">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Emiliani, C. 1975, &apos;Paleoclimatological Analysis of Late Quaternary Cores Form the Northeastern Gulf of Mexico.&apos;, Science, vol. 189, pp. 1083-88.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1126/science.218.4579.1273 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1126/science.218.4579.1273">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Dansgaard, W., Clausen, H.B., Gundestrup, N., Hammer, C.U., Johnsen, S.F., Kristinsdottir, P.M. &amp; Reeh, N. 1982, &apos;A New Greenland Deep Ice Core&apos;, Science, vol. 218, no. 4579, p. 1273.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1126/science.239.4844.1129 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1126/science.239.4844.1129">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Blake, D.R. &amp; Rowland, F.S. 1988, &apos;Continuing Worldwide Increase in Tropospheric Methane, 1978 to 1987&apos;, Science, vol. 239, no. 4844, p. 1129.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1126/science.289.5486.1897 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1126/science.289.5486.1897">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Shackleton, N.J. 2000, &apos;The 100,000-year ice-age cycle identified and found to lag temperature, carbon dioxide, and orbital eccentricity&apos;, Science, vol. 289, no. 5486, pp. 1897-902.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1175/1520-0469(1967)02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1175/1520-0469(1967)02"/>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.1177/0002764212458272 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.1177/0002764212458272">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Leiserowitz, A.A., Maibach, E.W., Roser-Renouf, C., Smith, N. &amp; Dawson, E. 2012,
+&apos;Climategate, Public Opinion, and the Loss of Trust&apos;, American Behavioral Scientist, vol. 57, no. 6, pp. 818-37.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.3390/su10093027 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.3390/su10093027">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Malmodin, J. &amp; Lundén, D. 2018, &apos;The Energy and Carbon Footprint of the Global ICT and E&amp;M Sectors 2010–2015&apos;, Sustainability.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.flavio.org/doi.org/10.3402/tellusa.v26i1-2.9737 -->
+
+    <owl:NamedIndividual rdf:about="http://www.flavio.org/doi.org/10.3402/tellusa.v26i1-2.9737">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Ehhalt, D.H. 1974, &apos;The atmospheric cycle of methane&apos;, vol. 26, no. 1‐2, pp. 58-70.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://350.org/press-release/1-4-million-students-across-the-globe-demand-climate-action -->
+
+    <owl:NamedIndividual rdf:about="https://350.org/press-release/1-4-million-students-across-the-globe-demand-climate-action">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bit.ly/36vdHh1 -->
+
+    <owl:NamedIndividual rdf:about="https://bit.ly/36vdHh1">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Manabe, S. &amp; Wetherald, R.T. 1967, &apos;Thermal Equilibrium of the Atmosphere with a Given Distribution of Relative Humidity&apos;, vol. 24, no. 3, pp. 241-59.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://blog.ted.com/greta-thunberg-nominated-for-nobel-peace-prize-and-other-ted-news -->
+
+    <owl:NamedIndividual rdf:about="https://blog.ted.com/greta-thunberg-nominated-for-nobel-peace-prize-and-other-ted-news">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://climate.nasa.gov/news/2465/2016-climate-trends-continue-to-breakrecords -->
+
+    <owl:NamedIndividual rdf:about="https://climate.nasa.gov/news/2465/2016-climate-trends-continue-to-breakrecords">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://earthobservatory.nasa.gov/world-of-change/DecadalTemp -->
+
+    <owl:NamedIndividual rdf:about="https://earthobservatory.nasa.gov/world-of-change/DecadalTemp">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1880"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://edition.cnn.com/2013/07/26/world/kyoto-protocol-fast-facts/index.html -->
+
+    <owl:NamedIndividual rdf:about="https://edition.cnn.com/2013/07/26/world/kyoto-protocol-fast-facts/index.html">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://en.wikipedia.org/wiki/IPCC_First_Assessment_Report -->
+
+    <owl:NamedIndividual rdf:about="https://en.wikipedia.org/wiki/IPCC_First_Assessment_Report">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://en.wikipedia.org/wiki/Okjökull -->
+
+    <owl:NamedIndividual rdf:about="https://en.wikipedia.org/wiki/Okjökull">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eos.org/articles/greenland-ice-sheet-beats-all-time-1-day-melt-record -->
+
+    <owl:NamedIndividual rdf:about="https://eos.org/articles/greenland-ice-sheet-beats-all-time-1-day-melt-record">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://history.aip.org/climate/index.htm -->
+
+    <owl:NamedIndividual rdf:about="https://history.aip.org/climate/index.htm">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://history.aip.org/climate/internat.htm#L_M084 -->
+
+    <owl:NamedIndividual rdf:about="https://history.aip.org/climate/internat.htm#L_M084">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://iahs.info/uploads/dms/079020.pdf -->
+
+    <owl:NamedIndividual rdf:about="https://iahs.info/uploads/dms/079020.pdf">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Mercer, John H. &quot;Antarctic ice and Sangamon sea level.&quot; (1968): 217-225.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://pdfs.semanticscholar.org/001d/53a455047ea13a2979f9ea59a4d29a09546c.pdf -->
+
+    <owl:NamedIndividual rdf:about="https://pdfs.semanticscholar.org/001d/53a455047ea13a2979f9ea59a4d29a09546c.pdf">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://public.wmo.int/en/about-us/who-we-are/history-IMO -->
+
+    <owl:NamedIndividual rdf:about="https://public.wmo.int/en/about-us/who-we-are/history-IMO">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1879"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://sciencepolicy.colorado.edu/icecaps/research/media_coverage/world/index.html -->
+
+    <owl:NamedIndividual rdf:about="https://sciencepolicy.colorado.edu/icecaps/research/media_coverage/world/index.html">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://theconversation.com/amazon-fires-explained-what-are-they-why-are-they-sodamaging-and-how-can-we-stop-them-122340 -->
+
+    <owl:NamedIndividual rdf:about="https://theconversation.com/amazon-fires-explained-what-are-they-why-are-they-sodamaging-and-how-can-we-stop-them-122340">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://theconversation.com/climate-change-sea-level-rise-could-displace-millions-ofpeople-within-two-generations-116753 -->
+
+    <owl:NamedIndividual rdf:about="https://theconversation.com/climate-change-sea-level-rise-could-displace-millions-ofpeople-within-two-generations-116753">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://theconversation.com/huge-wildfires-inthe-arctic-and-far-north-send-a-planetary-warning-121167 -->
+
+    <owl:NamedIndividual rdf:about="https://theconversation.com/huge-wildfires-inthe-arctic-and-far-north-send-a-planetary-warning-121167">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://theconversation.com/state-of-theclimate-2018-bureau-of-meteorology-and-csiro-109001 -->
+
+    <owl:NamedIndividual rdf:about="https://theconversation.com/state-of-theclimate-2018-bureau-of-meteorology-and-csiro-109001">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://unfccc.int/kyoto_protocol -->
+
+    <owl:NamedIndividual rdf:about="https://unfccc.int/kyoto_protocol">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://unfccc.int/process-and-meetings/the-paris-agreement/what-is-the-paris-agreement -->
+
+    <owl:NamedIndividual rdf:about="https://unfccc.int/process-and-meetings/the-paris-agreement/what-is-the-paris-agreement">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.aljazeera.com/indepth/opinion/afraid-greta-thunberg-190901191445655.html -->
+
+    <owl:NamedIndividual rdf:about="https://www.aljazeera.com/indepth/opinion/afraid-greta-thunberg-190901191445655.html">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.arcgis.com/apps/Cascade/index.html?appid=bba35e41b8da423498ae3bf461e161c8 -->
+
+    <owl:NamedIndividual rdf:about="https://www.arcgis.com/apps/Cascade/index.html?appid=bba35e41b8da423498ae3bf461e161c8">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.bbc.com/news/science-environment-47638588 -->
+
+    <owl:NamedIndividual rdf:about="https://www.bbc.com/news/science-environment-47638588">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.bbc.com/news/science-environment-49484530 -->
+
+    <owl:NamedIndividual rdf:about="https://www.bbc.com/news/science-environment-49484530">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.bbc.com/news/science-environment-49753680 -->
+
+    <owl:NamedIndividual rdf:about="https://www.bbc.com/news/science-environment-49753680">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.carbonbrief.org/analysis-why-scientists-think-100-of-global-warming-is-due-to-humans -->
+
+    <owl:NamedIndividual rdf:about="https://www.carbonbrief.org/analysis-why-scientists-think-100-of-global-warming-is-due-to-humans">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.cbsnews.com/news/report-1-million-animals-plant-species-face-extinction-due-climate-change-human-activity-population -->
+
+    <owl:NamedIndividual rdf:about="https://www.cbsnews.com/news/report-1-million-animals-plant-species-face-extinction-due-climate-change-human-activity-population">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.climatechangenews.com/2017/03/16/trump-budget-us-stop-funding-un-climate-process -->
+
+    <owl:NamedIndividual rdf:about="https://www.climatechangenews.com/2017/03/16/trump-budget-us-stop-funding-un-climate-process">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.climatecouncil.org.au/resources/the-critical-decade-climate-change-science-risks-and-responses-2011 -->
+
+    <owl:NamedIndividual rdf:about="https://www.climatecouncil.org.au/resources/the-critical-decade-climate-change-science-risks-and-responses-2011">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.climatesignals.org/events/european-heat-wave-2003 -->
+
+    <owl:NamedIndividual rdf:about="https://www.climatesignals.org/events/european-heat-wave-2003">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.earthday.org/about/the-history-of-earth-day -->
+
+    <owl:NamedIndividual rdf:about="https://www.earthday.org/about/the-history-of-earth-day">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.famousscientists.org/james-croll -->
+
+    <owl:NamedIndividual rdf:about="https://www.famousscientists.org/james-croll">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1864"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ipcc.ch/site/assets/uploads/2018/03/wg2TARtechsum.pdf -->
+
+    <owl:NamedIndividual rdf:about="https://www.ipcc.ch/site/assets/uploads/2018/03/wg2TARtechsum.pdf">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Manning, M., and C. Nobre. &quot;Technical Summary.&quot; Europe 5 (2001): 3.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ipcc.ch/site/assets/uploads/2018/05/SYR_AR5_FINAL_full_wcover.pdf -->
+
+    <owl:NamedIndividual rdf:about="https://www.ipcc.ch/site/assets/uploads/2018/05/SYR_AR5_FINAL_full_wcover.pdf">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>Pachauri, Rajendra K., et al. &quot;Climate change 2014: synthesis report. Contribution of Working Groups I.&quot; II and III to the fifth assessment report of the Intergovernmental Panel on Climate Change 151 (2014).</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ipcc.ch/site/assets/uploads/sites/2/2019/05/SR15_SPM_version_report_LR.pdf -->
+
+    <owl:NamedIndividual rdf:about="https://www.ipcc.ch/site/assets/uploads/sites/2/2019/05/SR15_SPM_version_report_LR.pdf">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <citation>IPCC 2018, Summary for Policymakers. In: Global Warming of 1.5°C. An IPCC Special Report on the impacts of global warming of 1.5°C above pre-industrial levels and related global greenhouse gas emission pathways, in the context of strengthening the global response to the threat of climate change, sustainable development, and efforts to eradicate poverty, In Press.</citation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ncdc.noaa.gov/sotc/hazards/201301#temps -->
+
+    <owl:NamedIndividual rdf:about="https://www.ncdc.noaa.gov/sotc/hazards/201301#temps">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ncdc.noaa.gov/sotc/hazards/201303#drought -->
+
+    <owl:NamedIndividual rdf:about="https://www.ncdc.noaa.gov/sotc/hazards/201303#drought">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.newscientist.com/article/dn27774-dutch-government-loses-worlds-firstclimate-liability-lawsuit -->
+
+    <owl:NamedIndividual rdf:about="https://www.newscientist.com/article/dn27774-dutch-government-loses-worlds-firstclimate-liability-lawsuit">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.sbs.com.au/news/iceland-holds-funeral-for-first-glacier-lost-to-climate-change -->
+
+    <owl:NamedIndividual rdf:about="https://www.sbs.com.au/news/iceland-holds-funeral-for-first-glacier-lost-to-climate-change">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+        <year rdf:resource="http://www.flavio.org/CLIMATEchange#1824"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.sbs.com.au/news/july-was-the-hottest-month-ever-recorded-on-earth -->
+
+    <owl:NamedIndividual rdf:about="https://www.sbs.com.au/news/july-was-the-hottest-month-ever-recorded-on-earth">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.telegraph.co.uk/news/earth/environment/climatechange/8949099/Durban-climate-change-the-agreement-explained.html -->
+
+    <owl:NamedIndividual rdf:about="https://www.telegraph.co.uk/news/earth/environment/climatechange/8949099/Durban-climate-change-the-agreement-explained.html">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.theguardian.com/australia-news/2019/sep/09/like-nothing-weve-seen-queensland-bushfires-tear-through-rainforest -->
+
+    <owl:NamedIndividual rdf:about="https://www.theguardian.com/australia-news/2019/sep/09/like-nothing-weve-seen-queensland-bushfires-tear-through-rainforest">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.theguardian.com/environment/2011/may/29/carbon-emissions-nuclearpower -->
+
+    <owl:NamedIndividual rdf:about="https://www.theguardian.com/environment/2011/may/29/carbon-emissions-nuclearpower">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.theguardian.com/environment/2016/aug/24/human-induced-climate-change-began-earlier-than-previously-thought -->
+
+    <owl:NamedIndividual rdf:about="https://www.theguardian.com/environment/2016/aug/24/human-induced-climate-change-began-earlier-than-previously-thought">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.theguardian.com/environment/climate-consensus-97-per-cent/2017/jan/02/climate-change-in-2016-the-good-the-bad-and-the-ugly -->
+
+    <owl:NamedIndividual rdf:about="https://www.theguardian.com/environment/climate-consensus-97-per-cent/2017/jan/02/climate-change-in-2016-the-good-the-bad-and-the-ugly">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.theguardian.com/theguardian/2012/dec/18/weekly-review-2012-weather-environment -->
+
+    <owl:NamedIndividual rdf:about="https://www.theguardian.com/theguardian/2012/dec/18/weekly-review-2012-weather-environment">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.theguardian.com/world/1986/apr/30/russia.nuclear -->
+
+    <owl:NamedIndividual rdf:about="https://www.theguardian.com/world/1986/apr/30/russia.nuclear">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.townandcountrymag.com/society/tradition/a28785126/pierre-casiraghi-grace-kelly-grandson-greta-thunberg-sailing -->
+
+    <owl:NamedIndividual rdf:about="https://www.townandcountrymag.com/society/tradition/a28785126/pierre-casiraghi-grace-kelly-grandson-greta-thunberg-sailing">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ucsusa.org/resources/ipcc-who-are-they -->
+
+    <owl:NamedIndividual rdf:about="https://www.ucsusa.org/resources/ipcc-who-are-they">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.washingtonpost.com/news/energy-environment/wp/2017/04/19/top-trump-advisors-at-odds-over-paris-climate-deal -->
+
+    <owl:NamedIndividual rdf:about="https://www.washingtonpost.com/news/energy-environment/wp/2017/04/19/top-trump-advisors-at-odds-over-paris-climate-deal">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.washingtonpost.com/news/worldviews/wp/2015/07/31/map-what-the-world-does-and-doesnt-know-about-climate-change -->
+
+    <owl:NamedIndividual rdf:about="https://www.washingtonpost.com/news/worldviews/wp/2015/07/31/map-what-the-world-does-and-doesnt-know-about-climate-change">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wri.org/blog/2014/01/timeline-2013-year-extreme-weather-events -->
+
+    <owl:NamedIndividual rdf:about="https://www.wri.org/blog/2014/01/timeline-2013-year-extreme-weather-events">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://youtu.be/UaKqhRTqSlg -->
+
+    <owl:NamedIndividual rdf:about="https://youtu.be/UaKqhRTqSlg">
+        <rdf:type rdf:resource="http://www.flavio.org/CLIMATEchange#Reference"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
